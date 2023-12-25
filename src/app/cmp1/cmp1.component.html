@@ -1,1 +1,6 @@
-<app-cmp2 [myNameFrom]="myName"></app-cmp2>
+<!-- <app-cmp2 [myNameFrom]="myName"></app-cmp2> -->
+<app-cmp2 [all]="getAll()" [half]="getHalf()" [minor]="getMinor()" (onChangeButton)="onFilterButton($event)">
+</app-cmp2>
+<div *ngFor="let item of listItem">
+    <app-cmp3 [listItem]="item" *ngIf="selectedButtonParent === 'all' || selectedButtonParent === item.inStock.toString()"></app-cmp3>
+</div>

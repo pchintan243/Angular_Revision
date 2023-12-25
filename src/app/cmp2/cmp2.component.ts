@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cmp2',
@@ -6,6 +6,26 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cmp2.component.css']
 })
 export class Cmp2Component {
+  // @Input()
+  // myNameFrom: string = '';
+
   @Input()
-  myNameFrom: string = '';
+  all: number = 0;
+
+  @Input()
+  half: number = 0;
+
+  @Input()
+  minor: number = 0;
+
+  selectedButton: string = 'all';
+
+  @Output()
+  onChangeButton: EventEmitter<string> = new EventEmitter<string>();
+
+  buttonChange() {
+    console.log('child');
+    
+    this.onChangeButton.emit(this.selectedButton);
+  }
 }

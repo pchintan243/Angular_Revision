@@ -1,1 +1,11 @@
-<p>My name is: <strong>{{myNameFrom}}</strong></p>
+<div class="container p-2 m-3">
+    <span>Filter:</span>
+    <input class="m-2" type="radio" name="btn" value="all" [(ngModel)]="selectedButton" (change)="buttonChange()">
+    <span>All {{'('+(all)+')'}}</span>
+
+    <input class="m-2" type="radio" name="btn" value="true" [(ngModel)]="selectedButton" (change)="buttonChange()">
+    <span>Half {{'('+(half)+')'}}</span>
+
+    <input class="m-2" type="radio" name="btn" value="false" [(ngModel)]="selectedButton" (change)="buttonChange()">
+    <span>Minor {{'('+(minor)+')'}}</span>
+</div>
