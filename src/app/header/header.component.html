@@ -1,2 +1,12 @@
+<!-- One way property binding:
+    1. string interpolation
+    2. property binding [] -->
+<!-- Two way property binding
+    Event binding () -->
+
+<!-- Another method for two way data binding is [(ngModel)] -->
+
 <input [(ngModel)]="title"><br>
 <p>{{title}}</p>
+
+<div *ngFor="let item of [2,3,4,5,6]">{{ item }}</div>

@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { Cmp1Component } from './cmp1/cmp1.component';
+import { Cmp2Component } from './cmp2/cmp2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    Cmp1Component,
+    Cmp2Component
   ],
   imports: [
     BrowserModule,
